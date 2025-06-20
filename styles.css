@@ -52,7 +52,8 @@ h1 {
 
 .attendance-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   min-width: 900px;
   background: #fff;
   margin-top: 1rem;
@@ -71,13 +72,18 @@ h1 {
   background: #f1f5fb;
   color: #2563eb;
   font-weight: 700;
+  text-align: center;
 }
 
-.attendance-table tr.date-row {
-  background: #f9fafb;
+.attendance-table tr {
+  transition: background 0.15s;
 }
 
 .attendance-table tr.person-row:nth-child(even) {
+  background: #f9fafb;
+}
+
+.attendance-table tr.person-row:nth-child(odd) {
   background: #f3f4f6;
 }
 
